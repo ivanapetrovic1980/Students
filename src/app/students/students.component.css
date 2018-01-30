@@ -1,0 +1,20 @@
+.selected{
+  background-color: green;
+  color: white;
+}
+
+.students{
+  margin-bottom: 5px;
+  list-style-type: none;
+}
+
+.students li{
+  font-size:  20px;
+  padding: 10px;
+
+}
+
+.students li:hover{
+  background-color: lightgreen;
+
+}

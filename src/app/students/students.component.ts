@@ -10,6 +10,7 @@ import { STUDENTS } from '../mock-student';
 export class StudentsComponent implements OnInit {
 
   students = STUDENTS;
+  selectedStudent: Student;
 
   student: Student = {
     id: 1,
@@ -17,6 +18,11 @@ export class StudentsComponent implements OnInit {
   };
 
   // student = 'Petar Petrovic';
+
+  onSelectedStudent(student) {
+    this.selectedStudent = student;
+  }
+
   constructor() { }
 
   ngOnInit() {
