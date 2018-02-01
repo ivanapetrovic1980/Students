@@ -7,21 +7,4 @@
 </div>
 
 
-
-
-
-<div *ngIf="selectedStudent">
-  <h2>{{ selectedStudent.name }} details:</h2>
-  <div>
-    <div>
-      {{ selectedStudent.id }}
-    </div>
-    <div>
-      <input type="text" name="" value="" [(ngModel)]="selectedStudent.name"> {{ selectedStudent.name}}
-    </div>
-    <div class="">
-      {{ selectedStudent.gender }}, {{ selectedStudent.description }}
-    </div>
-
-  </div>
-</div>
+<app-student-detail [forwarded]="selectedStudent"></app-student-detail>

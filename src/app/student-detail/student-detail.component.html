@@ -1,0 +1,19 @@
+<p>
+  student-detail works!
+</p>
+
+<div *ngIf="forwarded">
+  <h2>{{ forwarded.name }} details:</h2>
+  <div>
+    <div>
+      {{ forwarded.id }}
+    </div>
+    <div>
+      <input type="text" name="" value="" [(ngModel)]="forwarded.name"> {{ forwarded.name}}
+    </div>
+    <div class="">
+      {{ forwarded.gender }}, {{ forwarded.description }}
+    </div>
+
+  </div>
+</div>
