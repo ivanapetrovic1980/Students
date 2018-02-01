@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from '../student';
 import { STUDENTS } from '../mock-student';
+import { MockServiceService } from '../mock-service.service';
 
 @Component({
   selector: 'app-students',
@@ -9,15 +10,15 @@ import { STUDENTS } from '../mock-student';
 })
 export class StudentsComponent implements OnInit {
 
-  students = STUDENTS;
+  students: Student[];
   selectedStudent: Student;
 
-  student: Student = {
-    id: 1,
-    name: 'Petar Mitic',
-    gender: '',
-    description: ''
-  };
+  // student: Student = {
+  //   id: 1,
+  //   name: 'Petar Mitic',
+  //   gender: '',
+  //   description: ''
+  // };
 
   // student = 'Petar Petrovic';
 
@@ -25,9 +26,17 @@ export class StudentsComponent implements OnInit {
     this.selectedStudent = student;
   }
 
-  constructor() { }
+  constructor(private mockService: MockServiceService) { }
 
   ngOnInit() {
+    this.getStudentsFromService();
   }
+
+
+  getStudentsFromService(): void {
+    this.students = this.mockService.getStudentsFromMockFile();
+  }
+
+
 
 }
