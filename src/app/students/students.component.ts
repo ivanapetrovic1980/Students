@@ -14,7 +14,9 @@ export class StudentsComponent implements OnInit {
 
   student: Student = {
     id: 1,
-    name: 'Petar Mitic'
+    name: 'Petar Mitic',
+    gender: '',
+    description: ''
   };
 
   // student = 'Petar Petrovic';

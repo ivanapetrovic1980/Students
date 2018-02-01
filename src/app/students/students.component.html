@@ -1,10 +1,6 @@
 <div class="">
   <ul class="students">
-    <li
-    *ngFor="let student of students"
-    (click)= "onSelectedStudent(student)"
-    [class.selected]="student === selectedStudent"
-    >
+    <li *ngFor="let student of students" (click)="onSelectedStudent(student)" [class.selected]="student === selectedStudent">
       <span>{{ student.id }}</span> {{ student.name }}
     </li>
   </ul>
@@ -17,10 +13,15 @@
 <div *ngIf="selectedStudent">
   <h2>{{ selectedStudent.name }} details:</h2>
   <div>
-    <div>{{ selectedStudent.id }}</div>
     <div>
-      <input type="text" name="" value="" [(ngModel)]="selectedStudent.name">
-      {{ selectedStudent.name}}
+      {{ selectedStudent.id }}
     </div>
+    <div>
+      <input type="text" name="" value="" [(ngModel)]="selectedStudent.name"> {{ selectedStudent.name}}
+    </div>
+    <div class="">
+      {{ selectedStudent.gender }}, {{ selectedStudent.description }}
+    </div>
+
   </div>
 </div>
