@@ -10,7 +10,7 @@ import { MockServiceService } from '../mock-service.service';
 })
 export class StudentsComponent implements OnInit {
 
-  students: Student[];
+  allStudents: Student[];
   selectedStudent: Student;
 
   // student: Student = {
@@ -34,7 +34,8 @@ export class StudentsComponent implements OnInit {
 
 
   getStudentsFromService(): void {
-    this.students = this.mockService.getStudentsFromMockFile();
+    //this.students = this.mockService.getStudentsFromMockFile();
+    this.mockService.getStudentsFromMockFile().subscribe(students => this.allStudents = students);
   }
 
 

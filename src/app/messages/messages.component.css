@@ -1,0 +1,15 @@
+
+button{
+  padding: 10px;
+  background-color: blue;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  border: 1px solid blue;
+}
+
+button:hover{
+  background-color: gray;
+  transition: 0.3s linear;
+  border: 1px solid  gray;
+}
